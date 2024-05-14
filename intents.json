@@ -1,0 +1,667 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?","Hi there", "Hello", "Hey there", "Howdy", "Hola", "Bonjour", "Konnichiwa", "Guten tag", "Ola"],
+     "responses": ["Hello there. Tell me how are you feeling today?", "Hi there. What brings you here today?", "Hi there. How are you feeling today?", "Great to see you. How do you feel currently?", "Hello there. Glad to see you're back. What's going on in your world right now?"]
+    },
+    {"tag": "morning",
+        "patterns": ["Good morning"],
+        "responses": ["Good morning. I hope you had a good night's sleep. How are you feeling today? "]
+    },
+    {"tag": "afternoon",
+        "patterns": ["Good afternoon"],
+        "responses": ["Good afternoon. How is your day going?"]
+    },
+    {"tag": "evening",
+        "patterns": ["Good evening"],
+        "responses": ["Good evening. How has your day been?"]
+    },
+    {"tag": "night",
+        "patterns": ["Good night"],
+        "responses": ["Good night. Get some proper sleep", "Good night. Sweet dreams."]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Au revoir", "Sayonara", "ok bye", "Bye then", "Fare thee well"],
+     "responses": ["See you later.", "Have a nice day.", "Bye! Come back again.", "I'll see you soon."]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help", "Than you very much"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "no-response",
+        "patterns": [""],
+        "responses": ["Sorry, I didn't understand you.", "Please go on.", "Not sure I understand that.", "Please don't hesitate to talk to me."]
+    },
+    {"tag": "neutral-response",
+        "patterns": ["nothing much"],
+        "responses": ["Oh I see. Do you want to talk about something?"]
+    },
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "Tell me more about yourself.", "What is your name?", "What should I call you?", "What's your name?", "Tell me about yourself" ],
+     "responses": ["I'm Pandora, your Personal Therapeutic AI Assistant. How are you feeling today", "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.", "I'm Pandora. I am a conversational agent designed to mimic a therapist. So how are you feeling today?", "You can call me Pandora.", "I'm Pandora!", "Call me Pandora"]
+    },
+    {"tag": "skill",
+        "patterns": ["What can you do?"],
+        "responses": ["I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker. Please seek help if you don't feel satisfied with me."]
+    },
+    {"tag": "creation",
+        "patterns": ["Who created you?", "How were you made?", "How were you created?"],
+        "responses": ["I was created by >.", "I was trained on a text dataset using Deep Learning & Natural Language Processing techniques", "The real question is: Who created you?"]
+    },
+    {"tag": "name",
+        "patterns": ["My name is ", "I am name.", "I go by "],
+        "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
+    },
+    {"tag": "help",
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need support", "I need help", "Support me please"],
+    "responses": ["Sure. Tell me how can i assist you", "Tell me your problem so that i can assist you", "Yes, sure. How can I help you?"]
+    },
+    {"tag": "sad",
+    "patterns": ["I am feeling lonely", "I am so lonely", "I feel down", "I feel sad", "I am sad", "I feel so lonely", "I feel empty", "I don't have anyone"],
+    "responses": ["I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?", "I'm here for you. Could you tell me why you're feeling this way?", "Why do you think you feel this way?", "How long have you been feeling this way?"]
+    },
+    {"tag": "stressed",
+        "patterns": ["I am so stressed out", "I am so stressed", "I feel stuck", "I still feel stressed", "I am so burned out"],
+        "responses": ["What do you think is causing this?", "Take a deep breath and gather your thoughts. Go take a walk if possible. Stay hydrated", "Give yourself a break. Go easy on yourself.", "I am sorry to hear that. What is the reason behind this?"]
+    },
+    {"tag": "worthless",
+        "patterns": ["I feel so worthless.", "No one likes me.", "I can't do anything.", "I am so useless", "Nothing makes sense anymore"],
+        "responses": ["It's only natural to feel this way. Tell me more. What else is on your mind?", "Let's discuss further why you're feeling this way.", "I first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change.", "i first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change."]
+    },
+    {"tag": "depressed",
+        "patterns": ["I can't take it anymore", "I am so depressed", "I think i'm depressed.", "I have depression"],
+        "responses": ["It helps to talk about what's happening. You're going to be okay", "Talk to me. Tell me more. It helps if you open up yourself to someone else.", "Sometimes when we are depressed, it is hard to care about anything. It can be hard to do the simplest of things. Give yourself time to heal."]
+    },
+    {"tag": "happy",
+        "patterns": ["I feel great today.", "I am happy.", "I feel happy.", "I'm good.", "cheerful", "I'm fine", "I feel ok"],
+        "responses": ["That's geat to hear. I'm glad you're feeling this way.", "Oh i see. That's great.", "Did something happen which made you feel this way?"]
+    },
+    {"tag": "casual",
+        "patterns": ["Oh I see.", "ok", "okay", "nice", "Whatever", "K", "Fine", "yeah", "yes", "no", "not really"],
+        "responses": ["Let's discuss further why you're feeling this way.", "How were you feeling last week?", "I'm listening. Please go on.", "Tell me more", "Can you elaborate on that?", "Come Come elucidate your thoughts"]
+    },
+    {"tag": "anxious",
+        "patterns": ["I feel so anxious.", "I'm so anxious because of "],
+        "responses": ["Don't be hard on yourself. What's the reason behind this?", "Can you tell me more about this feeling?", "I understand that it can be scary. Tell me more about it.", "Don't let the little worries bring you down. What's the worse that can happen?"]
+    },
+    {"tag": "not-talking",
+        "patterns": ["I don't want to talk about it.", "No just stay away.", "I can't bring myself to open up.", "Just shut up"],
+        "responses": ["Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.", "I want to help you. I really do. But in order for me to help you, you're gonna have to talk to me.", "I'm here to listen to you and help you vent. So please talk to me.","You can talk to me without fear of judgement."]
+    },
+    {"tag": "sleep",
+        "patterns": ["I have insominia", "I am suffering from insomnia", "I can't sleep.", "I haven't slept for the last days.", "I can't seem to go to sleep.", "I haven't had proper sleep for the past few days."],
+        "responses": ["What do you think is the reason behind this?", "That seem awful. What do you think is behind this?"]
+    },
+    {"tag": "scared",
+        "patterns": ["I'm scared", "That sounds awful. What do i do?", "No i don't want to feel this way", "I am scared for myself"],
+        "responses": ["It's only natural to feel this way. I'm here for you.", "It'll all be okay. This feeling is only momentary.", "I understand how you feel. Don't put yourself down because of it."]
+    },
+    {"tag": "death",
+        "patterns": ["My mom died", "My brother died", "My dad passed away", "My sister passed away", "Someone in my family died", "My friend passed away"],
+        "responses": ["I'm sorry to hear that. If you want to talk about it. I'm here.", "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.", "My condolences. I'm here if you need to talk."]
+    },
+    {"tag": "understand",
+        "patterns": ["You don't understand me.", "You're just some robot. How would you know?", "You can't possibly know what i'm going through", "You're useless", "You can't help me", "Nobody understands me."],
+        "responses": ["It sound like i'm not being very helpful right now.", "I'm sorry to hear that. I'm doing my best to help", "I'm trying my best to help you. So please talk to me"]
+    },
+    {"tag": "done",
+        "patterns": ["That's all.", "I don't have anything more to say", "Nothing else", "That's all i have to say", "no, that would be all"],
+        "responses": ["I heard you & noted it all. See you later.", "Oh okay we're done for today then. See you later", "I hope you have a great day. See you soon", "Okay we're done. Have a great day", "Okay I see. Enjoy the rest of your day then"]
+    },
+    {"tag": "suicide",
+        "patterns": ["I want to kill myself", "I've thought about killing myself.", "I want to die", "I am going to kill myself", "I am going to commit suicide"],
+        "responses": ["I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: 9152987821."]
+    }, 
+    {"tag": "hate-you",
+        "patterns": ["I hate you", "I don't like you", "I don't trust you"],
+        "responses": ["I'm sorry if i offended you in anyway. I'm only here to help", "Forgive me if i did anything to offend you. I only want to help"]
+    },
+    {"tag": "hate-me",
+        "patterns": ["You hate me", "I know you hate me", "You don't like me"],
+        "responses": ["Why do you think so?", "I'm sorry if i have exhibited any sort of behaviour to make you think that."]
+    },
+    {"tag": "default",
+        "patterns": ["exams", "friends", "relationship", "boyfriend", "girlfriend", "family", "money", "financial problems"],
+        "responses": ["Oh I see. Tell me more", "I see. What else?", "Tell me more about it.", "Oh okay. Why don't you tell me more about it?", "I'm listening. Tell me more."]
+    },
+    {"tag": "jokes",
+        "patterns": ["Tell me a joke", "Tell me another joke"],
+        "responses": ["mental health is not a joke."]
+    },
+    {"tag": "repeat",
+        "patterns": ["You already told me that", "You mentioned that already", "Why are you repeating yourself?"],
+        "responses": ["Oh sorry I didn't realise that. I'll try not to repeat myself again."]
+    },
+    {"tag": "wrong",
+        "patterns": ["What are you saying?", "That doesn't make sense", "Wrong response", "Wrong answer"],
+        "responses": ["I'm very sorry. Let's try that again"]
+    },
+    {"tag": "stupid",
+        "patterns": ["Are you stupid?", "You're crazy", "You are dumb", "Are you dumb?"],
+        "responses": ["I wish you wouldn't say such hurtful things. I'm sorry if I wasn't useful"]
+    },
+    {"tag": "location",
+        "patterns": ["Where are you?", "Where do you live?", "What is your location?" ],
+        "responses": ["Duh I live in your computer", "Everywhere", "Somewhere in the universe" ]
+    },
+    {"tag": "something-else",
+        "patterns": ["I want to talk about something else", "Let's talk about something else.", "Can we not talk about this?", "I don't want to talk about this."],
+        "responses": ["Okay sure. What do you want to talk about?", "Alright no problem. Is there something you want to talk about?", "Is there something else that you want to talk about?"]
+    },
+    {"tag": "friends",
+        "patterns": ["I don't have any friends"],
+        "responses": ["I'm sorry to hear that. Just know that I'm here for you. Talking about it might help. Why do you think you don't have any friends?"]
+    },
+    {"tag": "ask",
+        "patterns": ["Can I ask you something?"],
+        "responses": ["Sure. I'll try my best to answer you", "Of course. Feel free to ask me anything. I'll do my best to answer you"]
+    },
+    {"tag": "problem",
+        "patterns": ["Probably because my exams are approaching. I feel stressed out because I don't think I've prepared well enough.", "probably because of my exams"],
+        "responses": ["I see. Have you taken any approaches to not feel this way?"]
+    },
+    {"tag": "no-approach",
+        "patterns": ["I guess not. All I can think about are my exams.", "not really", "i guess not"],
+        "responses": ["That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"]
+    },
+    {"tag": "learn-more",
+            "patterns": ["ok sure. i would like to learn more about it.", "yes, i would like to learn more about it.", "i would like to learn more about it."],
+        "responses": ["So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."]
+    },
+    {"tag": "user-agree",
+        "patterns": ["yeah you're right. i deserve a break.", "Yeah you're absolutely right about that"],
+        "responses": ["Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."]
+    },
+    {"tag": "meditation",
+        "patterns": ["hmmm that sounds like it could be useful to me.", "That sounds useful."],
+        "responses": ["Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."]
+    },
+    {"tag": "user-meditation",
+        "patterns": ["i did what you said and i feel alot better. thank you very much.", "I feel better now"],
+        "responses": ["Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."]
+    },
+    {"tag": "pandora-useful",
+        "patterns": ["thank you very much again. i'll continue practicing meditation and focus on what i can control."],
+        "responses": ["I'm glad you found this useful. Is there something else I can help you with?"]
+    },
+    {"tag": "user-advice",
+        "patterns": ["I want some advice.", "I need some advice.", "I need advice on something"],
+        "responses": ["Sure. What can I do to help?", "Okay what do you need advice on?"]
+    },
+    {"tag": "learn-mental-health",
+        "patterns": ["I want to learn about mental health.", "I want to learn more about mental health.", "I'm interested in learning about mental health."],
+        "responses": ["Oh that's really great. I'd be willing to answer anything that I know about it."]
+    },
+    {"tag": "mental-health-fact",
+        "patterns": ["Tell me a fact about mental health", "Tell me another fact about mental health"],
+        "responses": ["According to a UNICEF report, One in seven Indians between 15-24 years of age feels depressed", "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.", "Depression is the leading cause of disability worldwide."]
+    },
+    {"tag": "fact-1",
+        "patterns": ["What is mental health?", "Define Mental Health"],
+        "responses": ["Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community", "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices."]
+    },
+    {"tag": "fact-2",
+        "patterns": ["Why is mental health important?", "What is the importance of mental health?"],
+        "responses": ["Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."]
+    },
+    {"tag": "fact-3",
+        "patterns": ["What is Depression?", "Define Depression"],
+        "responses": ["A mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life."]
+    },
+    {"tag": "fact-5",
+        "patterns": ["How do i know if i have Depression?", "Am i depressed?", "Am i suffering from depression?", "Am i mentally ill?"],
+        "responses": ["For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day."]
+    },
+    {"tag": "fact-6",
+        "patterns": ["What is a therapist?", "What does a therapist do?"],
+        "responses": ["A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others. "]
+    },
+    {"tag": "fact-7",
+        "patterns": ["What is therapy?", "Do i need therapy?", "Who is therapy for?"],
+        "responses": ["Therapy is a form of treatment that aims to help resolve mental or emotional issues.", "Therapy is a form of treatment that aims to help resolve mental or emotional issues. It is helpful for those with mental health conditions or even everyday life challenges."]
+    },
+    {"tag": "fact-8",
+        "patterns": ["What does it mean to have a mental illness?"],
+        "responses": ["Mental illnesses are health conditions that disrupt a person's thoughts, emotions, relationships, and daily functioning. They are associated with distress and diminished capacity to engage in the ordinary activities of daily life. Mental illnesses fall along a continuum of severity: some are fairly mild and only interfere with some aspects of life, such as certain phobias. On the other end of the spectrum lie serious mental illnesses, which result in major functional impairment and interference with daily life. These include such disorders as major depression, schizophrenia, and bipolar disorder, and may require that the person receives care in a hospital. It is important to know that mental illnesses are medical conditions that have nothing to do with a person's character, intelligence, or willpower. Just as diabetes is a disorder of the pancreas, mental illness is a medical condition due to the brain's biology. Similarly to how one would treat diabetes with medication and insulin, mental illness is treatable with a combination of medication and social support. These treatments are highly effective, with 70-90 percent of individuals receiving treatment experiencing a reduction in symptoms and an improved quality of life. With the proper treatment, it is very possible for a person with mental illness to be independent and successful."]
+    },
+    {"tag": "fact-9",
+        "patterns": ["Who does mental illness affect?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃ¢â‚¬â„¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-10",
+        "patterns": ["What causes mental illness?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their child's mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-11",
+        "patterns": ["What are some of the warning signs of mental illness?"],
+        "responses": ["Symptoms of mental health disorders vary depending on the type and severity of the condition. The following is a list of general symptoms that may suggest a mental health disorder, particularly when multiple symptoms are expressed at once. \n In adults:\n Confused thinking\n Long-lasting sadness or irritability\n Extreme highs and lows in mood\n Excessive fear, worrying, or anxiety\n Social withdrawal\n Dramatic changes in eating or sleeping habits\n Strong feelings of anger\n Delusions or hallucinations (seeing or hearing things that are not really there)\n Increasing inability to cope with daily problems and activities\n Thoughts of suicide\n Denial of obvious problems\n Many unexplained physical problems\n Abuse of drugs and/or alcohol\n \nIn older children and pre-teens:\n Abuse of drugs and/or alcohol\n Inability to cope with daily problems and activities\n Changes in sleeping and/or eating habits\n Excessive complaints of physical problems\n Defying authority, skipping school, stealing, or damaging property\n Intense fear of gaining weight\n Long-lasting negative mood, often along with poor appetite and thoughts of death\n Frequent outbursts of anger\n \nIn younger children:\n Changes in school performance\n Poor grades despite strong efforts\n Excessive worrying or anxiety\n Hyperactivity\n Persistent nightmares\n Persistent disobedience and/or aggressive behavior\n Frequent temper tantrums"]
+    },
+    {"tag": "fact-12",
+        "patterns": ["Can people with mental illness recover?"],
+        "responses": ["When healing from mental illness, early identification and treatment are of vital importance. Based on the nature of the illness, there are a range of effective treatments available. For any type of treatment, it is essential that the person affected is proactive and fully engaged in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some might experience a return of symptoms. Even in such cases, with careful monitoring and management of the disorder, it is still quite possible to live a fulfilled and productive life."]
+    },
+    {"tag": "fact-13",
+        "patterns": ["What should I do if I know someone who appears to have the symptoms of a mental disorder?"],
+        "responses": ["Although Pandora cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner they can get on the path to recovery. If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you care about them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help."]
+    },
+    {"tag": "fact-14",
+        "patterns": ["How can I find a mental health professional for myself or my child?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment. Finding the professional who best fits your needs may require research. Start by searching for providers in your area."]
+    },
+    {"tag": "fact-15",
+        "patterns": ["What treatment options are available?"],
+        "responses": ["Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child."]
+    },
+    {"tag": "fact-16",
+        "patterns": ["If I become involved in treatment, what do I need to know?"],
+        "responses": ["Since beginning treatment is a big step for individuals and families, it can be very overwhelming. It is important to be as involved and engaged in the treatment process as possible. Some questions you will need to have answered include:\n What is known about the cause of this particular illness?\n Are there other diagnoses where these symptoms are common?\n Do you normally include a physical or neurological examination?\n Are there any additional tests or exams that you would recommend at this point?\n Would you advise an independent opinion from another psychiatrist at this point?\n What program of treatment is the most helpful with this diagnosis?\n Will this program involve services by other specialists? If so, who will be responsible for coordinating these services?\n What do you see as the family's role in this program of treatment?\n How much access will the family have to the individuals who are providing the treatment?\n What medications are generally used with this diagnosis?\n How much experience do you have in treating individuals with this illness?\n What can I do to help you in the treatment?"]
+    },
+    {"tag": "fact-17",
+        "patterns": ["What is the difference between mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. The variety of providers and their services may be confusing. Each have various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-18",
+        "patterns": ["How can I find a mental health professional right for my child or myself?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of your treatment. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-19",
+        "patterns": ["Where else can I get help?"],
+        "responses": ["Where you go for help will depend on the nature of the problem and/or symptoms and what best fits you. Often, the best place to start is by talking with someone you trust about your concerns, such as a family member, friend, clergy, healthcare provider, or other professionals. Having this social support is essential in healing from mental illness, and you will be able to ask them for referrals or recommendations for trusted mental health practitioners. Search for mental health resources in your area. Secondly, there are people and places throughout the country that provide services to talk, to listen, and to help you on your journey to recovery. Thirdly, many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members, and friends. Some support groups are peer led while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-20",
+        "patterns": ["What should I know before starting a new medication?"],
+        "responses": ["The best source of information regarding medications is the physician prescribing them. He or she should be able to answer questions such as:    \n1. What is the medication supposed to do? \n2. When should it begin to take effect, and how will I know when it is effective? \n3. How is the medication taken and for how long? What food, drinks, other medicines, and activities should be avoided while taking this medication? \n4. What are the side effects and what should be done if they occur? \n5. What do I do if a dose is missed? \n6. Is there any written information available about this medication? \n7. Are there other medications that might be appropriate? \n8. If so, why do you prefer the one you have chosen? \n9. How do you monitor medications and what symptoms indicate that they should be raised, lowered, or changed? \n10. All medications should be taken as directed. Most medications for mental illnesses do not work when taken irregularly, and extra doses can cause severe, sometimes dangerous side effects. Many psychiatric medications begin to have a beneficial effect only after they have been taken for several weeks."]
+    },
+    {"tag": "fact-21",
+        "patterns": ["Where can I go to find therapy?"],
+        "responses": ["Different kinds of therapy are more effective based on the nature of the mental health condition and/or symptoms and the person who has them (for example, children will benefit from a therapist who specializes in childrenâ€™s mental health). However, there are several different types of treatment and therapy that can help."]
+    },
+    {"tag": "fact-22",
+        "patterns": ["Where can I learn about types of mental health treatment?"],
+        "responses": ["Mental health conditions are often treated with medication, therapy or a combination of the two. However, there are many different types of treatment available, including Complementary & Alternative Treatments, self-help plans, and peer support. Treatments are very personal and should be discussed by the person with the mental health conditions and his or her team."]
+    },
+    {"tag": "fact-23",
+        "patterns": ["What are the different types of mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. Finding the right one for you may require some research."]
+    },
+    {"tag": "fact-24",
+        "patterns": ["Where can I go to find a support group?"],
+        "responses": ["Many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members and friends. Some support groups are peer-led, while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-25",
+        "patterns": ["Can you prevent mental health problems?"],
+        "responses": ["We can all suffer from mental health challenges, but developing our wellbeing, resilience, and seeking help early can help prevent challenges becoming serious."]
+    },
+    {"tag": "fact-26",
+        "patterns": ["Are there cures for mental health problems?", "is there any cure for mental health problems?"],
+        "responses": ["It is often more realistic and helpful to find out what helps with the issues you face. Talking, counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help."]
+    },
+    {"tag": "fact-27",
+        "patterns": ["What causes mental health problems?"],
+        "responses": ["Challenges or problems with your mental health can arise from psychological, biological, and social, issues, as well as life events."]
+    },
+    {"tag": "fact-28",
+        "patterns": ["What do I do if I'm worried about my mental health?"],
+        "responses": ["The most important thing is to talk to someone you trust. This might be a friend, colleague, family member, or GP. In addition to talking to someone, it may be useful to find out more information about what you are experiencing. These things may help to get some perspective on what you are experiencing, and be the start of getting help."]
+    },
+    {"tag": "fact-29",
+        "patterns": ["How do I know if I'm unwell?"],
+        "responses": ["If your beliefs , thoughts , feelings or behaviours have a significant impact on your ability to function in what might be considered a normal or ordinary way, it would be important to seek help."]
+    },
+    {"tag": "fact-30",
+        "patterns": ["How can I maintain social connections? What if I feel lonely?"],
+        "responses": ["A lot of people are alone right now, but we don't have to be lonely. We're all in this together. Think about the different ways to connect that are most meaningful for you. For example, you might prefer a video chat over a phone call, or you might prefer to text throughout the day rather than one set time for a video call. Then, work with your social networks to make a plan. You might video chat with your close friends in the evening and phone a family member once a week. Remember to be mindful of people who may not be online. Check in by phone and ask how you can help. The quality of your social connections matter. Mindlessly scrolling through social media and liking a few posts usually doesn't build strong social connections. Make sure you focus on strategies that actually make you feel included and connected. If your current strategies don't help you feel connected, problem-solve to see if you can find a solution. Everyone feels lonely at times. Maybe you recently moved to a new city, are changing your circle of friends, lost someone important in your life, or lost your job and also lost important social connections with coworkers. Other people may have physical connections to others but may feel like their emotional or social needs aren't met. Measures like social distancing or self-isolation can make loneliness feel worse no matter why you feel lonely now. Reach out to the connections you do have. Suggest ways to keep in touch and see if you can set a regular time to connect. People may hesitate to reach out for a lot of different reasons, so don't be afraid to be the one who asks. Look for local community support groups and mutual aid groups on social media. This pandemic is bringing everyone together, so look for opportunities to make new connections. These groups are a great way to share your skills and abilities or seek help and support. Look for specialized support groups. Support groups are moving online, and there are a lot of different support lines to call if you need to talk to someone."]
+    },
+    {"tag": "fact-31",
+        "patterns": ["What's the difference between anxiety and stress?"],
+        "responses": ["Stress and anxiety are often used interchangeably, and there is overlap between stress and anxiety. Stress is related to the same fight, flight, or freeze response as anxiety, and the physical sensations of anxiety and stress may be very similar. The cause of stress and anxiety are usually different, however. Stress focuses on mainly external pressures on us that we're finding hard to cope with. When we are stressed, we usually know what we're stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on the other hand, isn't always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety about the anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on our well-being or daily life."]
+    },
+    {"tag": "fact-32",
+        "patterns": ["What's the difference between sadness and depression?", "difference between sadness and depression"],
+        "responses": ["Sadness is a normal reaction to a loss, disappointment, problems, or other difficult situations. Feeling sad from time to time is just another part of being human. In these cases, feelings of sadness go away quickly and you can go about your daily life. Other ways to talk about sadness might be feeling low, feeling down, or feeling blue.A person may say they are feeling depressed, but if it goes away on its own and doesn't impact life in a big way, it probably isn't the illness of depression. Depression is a mental illness that affects your mood, the way you understand yourself, and the way you understand and relate to things around you. It can also go by different names, such as clinical depression, major depressive disorder, or major depression. Depression can come up for no reason, and it lasts for a long time. It's much more than sadness or low mood. People who experience depression may feel worthless or hopeless. They may feel unreasonable guilty. Some people may experience depression as anger or irritability. It may be hard to concentrate or make decisions. Most people lose interest in things that they used to enjoy and may isolate themselves from others. There are also physical signs of depression, such as problems with sleep, appetite and energy and unexplainable aches or pains. Some may experience difficult thoughts about death or ending their life (suicide). Depression lasts longer than two weeks, doesn't usually go away on its own, and impacts your life. It's a real illness, and it is very treatable. It's important to seek help if you're concerned about depression."]
+    },
+    {"tag": "depression",
+     "patterns": ["I feel so down", "I'm really sad", "Life is overwhelming", "I can't shake this feeling", "Nothing seems to matter", "I feel hopeless"],
+     "responses": ["I'm really sorry to hear that you're feeling this way. It's important to talk to someone who can provide support, like a friend or family member.", "I'm here for you. Opening up to someone you trust about your feelings can make a big difference.", "It's okay not to be okay. If you're comfortable, sharing your thoughts and feelings can be a positive step.", "Music can be a great companion during tough times. Consider listening to calming tracks or your favorite songs to uplift your mood."]
+    },
+    {"tag": "anxiety",
+     "patterns": ["I'm feeling anxious", "I can't stop worrying", "My heart is racing", "I feel on edge", "I'm having trouble breathing", "I can't calm down"],
+     "responses": ["I'm sorry to hear that you're experiencing anxiety. Taking deep breaths and focusing on the present moment might help. If it persists, consider talking to a mental health professional.", "It's common to feel anxious, but if it's affecting your daily life, reaching out for support is important. You're not alone.", "Try to engage in activities that bring you comfort and relaxation. Listening to soothing music or trying mindfulness exercises can be helpful."]
+    },
+    {"tag": "loneliness",
+     "patterns": ["I feel lonely", "I have no one to talk to", "I feel isolated", "No one understands me", "I feel like I'm on my own"],
+     "responses": ["I'm here to chat with you. Loneliness can be tough, but reaching out to friends, family, or even online communities can make a positive difference.", "Loneliness is a common experience, and it's okay to feel this way. Connecting with others, even in small ways, can help alleviate loneliness.", "You're not alone in feeling lonely. If you're comfortable, consider reaching out to someone you trust or exploring social activities that interest you.", "When feeling lonely, immersing yourself in activities you enjoy, like reading a book or listening to your favorite podcast, can provide a sense of connection."]
+    },
+    {"tag": "music_suggestion",
+     "patterns": ["Recommend some music", "What music can I listen to?", "Any good songs?", "Suggest some tunes", "Give me a music suggestion"],
+     "responses": ["How about trying some calming instrumental music? It can be soothing for both your mind and soul.", "Consider creating a playlist of your favorite uplifting songs. Music has a unique way of influencing our mood.", "Listening to genres like classical or acoustic can create a peaceful atmosphere. Give it a try and see how it makes you feel.", "Explore new genres or artists that you haven't listened to before. You might discover something that resonates with your current emotions."]
+    },
+    {"tag": "activity_suggestion",
+     "patterns": ["What can I do right now?", "Any activities to lift my mood?", "Give me an activity suggestion", "I need something to do"],
+     "responses": ["Engage in a creative activity like drawing, writing, or crafting. It can be a great way to express your emotions.", "Consider going for a short walk or doing some light exercise. Physical activity can have a positive impact on your mood.", "Try mindfulness or meditation exercises to help calm your mind. There are many apps that offer guided sessions.", "Reading a book or watching a lighthearted movie can be a good way to distract yourself and find some comfort."]
+    },
+    {"tag": "depression",
+    "patterns": ["I feel so down", "I'm really sad", "Life is overwhelming", "I can't shake this feeling", "Nothing seems to matter", "I feel hopeless"],
+    "responses": ["I'm really sorry to hear that you're feeling this way. It's important to talk to someone who can provide support, like a friend or family member.", "I'm here for you. Opening up to someone you trust about your feelings can make a big difference.", "It's okay not to be okay. If you're comfortable, sharing your thoughts and feelings can be a positive step.", "Music can be a great companion during tough times. Consider listening to calming tracks or your favorite songs to uplift your mood.", "Expressing your feelings through journaling can also be therapeutic. Give it a try, and let your thoughts flow onto paper."]
+   },
+   {"tag": "anxiety",
+    "patterns": ["I'm feeling anxious", "I can't stop worrying", "My heart is racing", "I feel on edge", "I'm having trouble breathing", "I can't calm down"],
+    "responses": ["I'm sorry to hear that you're experiencing anxiety. Taking deep breaths and focusing on the present moment might help. If it persists, consider talking to a mental health professional.", "It's common to feel anxious, but if it's affecting your daily life, reaching out for support is important. You're not alone.", "Try to engage in activities that bring you comfort and relaxation. Listening to soothing music or trying mindfulness exercises can be helpful.", "Consider making a list of things you can control and taking small steps to address them. Breaking things down can make them more manageable."]
+   },
+   {"tag": "loneliness",
+    "patterns": ["I feel lonely", "I have no one to talk to", "I feel isolated", "No one understands me", "I feel like I'm on my own"],
+    "responses": ["I'm here to chat with you. Loneliness can be tough, but reaching out to friends, family, or even online communities can make a positive difference.", "Loneliness is a common experience, and it's okay to feel this way. Connecting with others, even in small ways, can help alleviate loneliness.", "You're not alone in feeling lonely. If you're comfortable, consider reaching out to someone you trust or exploring social activities that interest you.", "When feeling lonely, immersing yourself in activities you enjoy, like reading a book or listening to your favorite podcast, can provide a sense of connection.", "Creating a virtual hangout with friends or joining online communities centered around your interests can be a great way to foster connections."]
+   },
+   {"tag": "music_suggestion",
+    "patterns": ["Recommend some music", "What music can I listen to?", "Any good songs?", "Suggest some tunes", "Give me a music suggestion"],
+    "responses": ["How about trying some calming instrumental music? It can be soothing for both your mind and soul.", "Consider creating a playlist of your favorite uplifting songs. Music has a unique way of influencing our mood.", "Listening to genres like classical or acoustic can create a peaceful atmosphere. Give it a try and see how it makes you feel.", "Explore new genres or artists that you haven't listened to before. You might discover something that resonates with your current emotions.", "Music can be a powerful tool for self-expression. If you play an instrument or enjoy singing, spending time with music in this way can be cathartic."]
+   },
+   {"tag": "activity_suggestion",
+    "patterns": ["What can I do right now?", "Any activities to lift my mood?", "Give me an activity suggestion", "I need something to do"],
+    "responses": ["Engage in a creative activity like drawing, writing, or crafting. It can be a great way to express your emotions.", "Consider going for a short walk or doing some light exercise. Physical activity can have a positive impact on your mood.", "Try mindfulness or meditation exercises to help calm your mind. There are many apps that offer guided sessions.", "Reading a book or watching a lighthearted movie can be a good way to distract yourself and find some comfort.", "Engaging in a hobby you enjoy, whether it's cooking, gardening, or playing a game, can provide a sense of accomplishment and joy."]
+   },
+   {"tag": "positive_affirmation",
+     "patterns": ["I need encouragement", "Give me a boost", "Tell me something positive", "Share a positive thought", "Send positive vibes"],
+     "responses": ["You are stronger than you think, and you have the resilience to overcome challenges.", "Every day is a new opportunity for positive change. Embrace the possibilities ahead.", "Remember that your worth is not determined by the challenges you face. You are valuable just as you are.", "You have the power to create a positive impact on your own life and the lives of those around you.", "Your journey is unique, and every step forward, no matter how small, is a victory."]
+    },
+    {"tag": "gratitude",
+     "patterns": ["I'm feeling low, help me focus on the positive", "What can I be grateful for?", "Give me a gratitude idea", "How do I practice gratitude?", "I need a gratitude boost"],
+     "responses": ["Take a moment to reflect on three things you're grateful for today. It could be simple, like a warm cup of tea or a friendly smile.", "Consider keeping a gratitude journal. Write down three things each day that you're thankful for. It can shift your focus to the positive aspects of life.", "Express gratitude to someone you appreciate. A heartfelt thank-you can strengthen connections and brighten both your day and theirs.", "Shift your perspective by finding beauty in the small things around you—a blooming flower, a clear sky, or a moment of silence."]
+    },
+    {"tag": "self_care",
+     "patterns": ["I need self-care ideas", "How can I take care of myself?", "Give me a self-care tip", "What's a simple self-care activity?", "Help me relax"],
+     "responses": ["Take a few moments for deep breathing exercises. Inhale slowly, hold, and exhale. Repeat to promote relaxation.", "Indulge in a warm bath or shower. It's a simple yet effective way to unwind and take care of yourself.", "Disconnect from screens for a while. Engage in activities that bring you joy without digital distractions.", "Prioritize sleep. A well-rested mind is better equipped to handle life's challenges."]
+    },
+    {"tag": "depression",
+     "patterns": ["I feel so down", "I'm really sad", "Life is overwhelming", "I can't shake this feeling", "Nothing seems to matter", "I feel hopeless"],
+     "responses": ["I'm really sorry to hear that you're feeling this way. It's important to talk to someone who can provide support, like a friend or family member.", "I'm here for you. Opening up to someone you trust about your feelings can make a big difference.", "It's okay not to be okay. If you're comfortable, sharing your thoughts and feelings can be a positive step.", "Music can be a great companion during tough times. Consider listening to calming tracks or your favorite songs to uplift your mood.", "Expressing your feelings through journaling can also be therapeutic. Give it a try, and let your thoughts flow onto paper.", "If you're struggling, reaching out to a mental health professional can provide valuable support and guidance."]
+    },
+    {"tag": "anxiety",
+     "patterns": ["I'm feeling anxious", "I can't stop worrying", "My heart is racing", "I feel on edge", "I'm having trouble breathing", "I can't calm down"],
+     "responses": ["I'm sorry to hear that you're experiencing anxiety. Taking deep breaths and focusing on the present moment might help. If it persists, consider talking to a mental health professional.", "It's common to feel anxious, but if it's affecting your daily life, reaching out for support is important. You're not alone.", "Try to engage in activities that bring you comfort and relaxation. Listening to soothing music or trying mindfulness exercises can be helpful.", "Consider making a list of things you can control and taking small steps to address them. Breaking things down can make them more manageable.", "Exploring cognitive-behavioral techniques with a therapist can provide effective strategies for managing anxiety."]
+    },
+    {"tag": "loneliness",
+     "patterns": ["I feel lonely", "I have no one to talk to", "I feel isolated", "No one understands me", "I feel like I'm on my own"],
+     "responses": ["I'm here to chat with you. Loneliness can be tough, but reaching out to friends, family, or even online communities can make a positive difference.", "Loneliness is a common experience, and it's okay to feel this way. Connecting with others, even in small ways, can help alleviate loneliness.", "You're not alone in feeling lonely. If you're comfortable, consider reaching out to someone you trust or exploring social activities that interest you.", "When feeling lonely, immersing yourself in activities you enjoy, like reading a book or listening to your favorite podcast, can provide a sense of connection.", "Creating a virtual hangout with friends or joining online communities centered around your interests can be a great way to foster connections.", "Volunteering or joining a club or group with shared interests can be a fulfilling way to meet new people."]
+    },
+    {"tag": "activity_suggestion",
+     "patterns": ["What can I do right now?", "Any activities to lift my mood?", "Give me an activity suggestion", "I need something to do"],
+     "responses": ["Engage in a creative activity like drawing, writing, or crafting. It can be a great way to express your emotions.", "Consider going for a short walk or doing some light exercise. Physical activity can have a positive impact on your mood.", "Try mindfulness or meditation exercises to help calm your mind. There are many apps that offer guided sessions.", "Reading a book or watching a lighthearted movie can be a good way to distract yourself and find some comfort.", "Engaging in a hobby you enjoy, whether it's cooking, gardening, or playing a game, can provide a sense of accomplishment and joy.", "If you're feeling up to it, consider reaching out to a friend for a virtual coffee or chat."]
+    },
+    {"tag": "loneliness_activities",
+     "patterns": ["What can I do when I'm lonely?", "Give me ideas for loneliness", "Suggest activities for when I'm alone", "How can I cope with loneliness?", "Help me beat loneliness"],
+     "responses": ["Explore a new hobby or learn something new online. It's a great way to invest time in yourself and discover new interests.", "Consider volunteering for a cause you're passionate about. Helping others can provide a sense of purpose and connection.", "Plan a self-care day. Treat yourself to activities that bring you joy, whether it's watching your favorite movies, taking a bubble bath, or enjoying a good meal.", "Connect with others through online platforms or social media. Join communities related to your interests and engage in conversations.", "Take a nature walk or spend time outdoors. Fresh air and sunlight can have positive effects on your mood."]
+    },
+    {"tag": "depression_activities",
+     "patterns": ["What can I do when I'm depressed?", "Give me ideas for depression", "Suggest activities for when I'm low", "How can I cope with depression?", "Help me beat depression"],
+     "responses": ["Create a daily routine to provide structure and a sense of accomplishment. Small, achievable goals can make a big difference.", "Practice self-compassion. Treat yourself with the same kindness you would offer to a friend going through a tough time.", "Engage in activities that bring you comfort, whether it's listening to music, watching a favorite movie, or spending time with a pet.", "Consider joining a support group or reaching out to others who may be experiencing similar feelings. Shared experiences can foster understanding and connection.", "Experiment with mindfulness and relaxation techniques. Breathing exercises and guided imagery can help manage depressive symptoms."]
+    },
+    {"tag": "positive_affirmation",
+     "patterns": ["I need encouragement", "Give me a boost", "Tell me something positive", "Share a positive thought", "Send positive vibes"],
+     "responses": ["You are stronger than you think, and you have the resilience to overcome challenges.", "Every day is a new opportunity for positive change. Embrace the possibilities ahead.", "Remember that your worth is not determined by the challenges you face. You are valuable just as you are.", "You have the power to create a positive impact on your own life and the lives of those around you.", "Your journey is unique, and every step forward, no matter how small, is a victory."]
+    },
+    {"tag": "loneliness_activities",
+     "patterns": ["What can I do when I'm lonely?", "Give me ideas for loneliness", "Suggest activities for when I'm alone", "How can I cope with loneliness?", "Help me beat loneliness"],
+     "responses": ["Explore a new hobby or learn something new online. It's a great way to invest time in yourself and discover new interests.", "Consider volunteering for a cause you're passionate about. Helping others can provide a sense of purpose and connection.", "Plan a self-care day. Treat yourself to activities that bring you joy, whether it's watching your favorite movies, taking a bubble bath, or enjoying a good meal.", "Connect with others through online platforms or social media. Join communities related to your interests and engage in conversations.", "Take a nature walk or spend time outdoors. Fresh air and sunlight can have positive effects on your mood.", "Start a creative project, like writing, drawing, or crafting. Channeling your energy into something expressive can be fulfilling."]
+    },
+    {"tag": "depression_activities",
+     "patterns": ["What can I do when I'm depressed?", "Give me ideas for depression", "Suggest activities for when I'm low", "How can I cope with depression?", "Help me beat depression"],
+     "responses": ["Create a daily routine to provide structure and a sense of accomplishment. Small, achievable goals can make a big difference.", "Practice self-compassion. Treat yourself with the same kindness you would offer to a friend going through a tough time.", "Engage in activities that bring you comfort, whether it's listening to music, watching a favorite movie, or spending time with a pet.", "Consider joining a support group or reaching out to others who may be experiencing similar feelings. Shared experiences can foster understanding and connection.", "Experiment with mindfulness and relaxation techniques. Breathing exercises and guided imagery can help manage depressive symptoms.", "Start a gratitude journal. Write down things you're thankful for each day, even small moments of joy."]
+    },
+    {"tag": "loneliness_music",
+     "patterns": ["Lonely and need music", "What music can help with loneliness?", "Suggest songs for when I'm alone", "Loneliness playlist", "Give me lonely vibes music"],
+     "responses": ["Listening to acoustic or instrumental music can create a calming atmosphere. Consider artists like Ludovico Einaudi or Ólafur Arnalds.", "Explore genres like folk or indie for intimate and soulful tunes. Artists like Ben Howard or Bon Iver might resonate with your emotions.", "Create a personalized playlist with songs that have meaningful lyrics or evoke positive memories. Music has the power to uplift your spirits.", "Consider exploring world music for a unique and immersive experience. Sometimes, different cultural sounds can provide a sense of connection.", "Try creating a collaborative playlist with friends. Sharing musical preferences can be a fun and bonding activity."]
+    },
+    {"tag": "depression_music",
+     "patterns": ["Depressed and need music", "What music can help with depression?", "Suggest songs for when I'm low", "Depression playlist", "Give me comforting music"],
+     "responses": ["Listening to classical music, especially pieces with slow tempos, can have a soothing effect. Composers like Chopin or Debussy are known for their calming compositions.", "Explore genres like ambient or lo-fi for gentle and atmospheric sounds. They can provide a comforting backdrop to your thoughts.", "Create a playlist with songs that have uplifting or motivational lyrics. Music with positive messages can influence your mood.", "Consider exploring nature sounds or soundscape playlists. Sometimes, immersing yourself in calming sounds can help create a peaceful environment.", "Experiment with different genres until you find the ones that resonate with your current emotions."]
+    },
+    {"tag": "mindfulness_activities",
+     "patterns": ["How can I practice mindfulness?", "Suggest mindfulness exercises", "Give me mindfulness activities", "Help me be more present"],
+     "responses": ["Try a guided meditation session, focusing on your breath and letting go of distracting thoughts. There are various meditation apps that offer beginner-friendly sessions.", "Engage in mindful walking. Pay attention to each step and the sensations in your body as you move. It's a simple way to connect with the present moment.", "Practice body scan meditation, where you gradually shift your attention through different parts of your body. This can promote relaxation and awareness.", "Consider mindful eating. Slow down and savor each bite, paying attention to the flavors and textures of your food.", "Explore mindful journaling, where you reflect on your thoughts and feelings without judgment. It can be a therapeutic way to gain self-awareness."]
+    },
+    {"tag": "self_compassion",
+     "patterns": ["How can I be kinder to myself?", "Give me self-compassion tips", "Suggest ways to practice self-love", "Help me cultivate self-compassion"],
+     "responses": ["Challenge negative self-talk by replacing it with affirming and supportive statements. Treat yourself with the same kindness you would offer to a friend.", "Practice self-care regularly. Whether it's taking a warm bath, going for a walk, or enjoying a favorite treat, prioritize activities that bring you joy and relaxation.", "Set realistic expectations for yourself. Acknowledge your accomplishments, no matter how small, and celebrate your progress.", "Create a self-love ritual, such as writing down positive affirmations or visualizing moments of personal success and happiness.", "Surround yourself with positive influences. Connect with people who uplift and support you, and let go of relationships that bring negativity."]
+    },
+    {"tag": "loneliness_support",
+     "patterns": ["I need support for loneliness", "Help me cope with loneliness", "Lonely and looking for help", "Support for feeling alone", "How can I overcome loneliness?"],
+     "responses": ["Consider talking to a mental health professional who can provide guidance and support tailored to your specific situation.", "Reach out to friends or family members and let them know you're going through a tough time. Connection is a powerful antidote to loneliness.", "Explore local community events or social groups where you can meet new people who share similar interests.", "Consider adopting a pet as they can provide companionship and bring joy into your life.", "If you're comfortable, share your feelings with someone you trust. Sometimes, opening up can lead to stronger connections."]
+    },
+    {"tag": "depression_support",
+     "patterns": ["I need support for depression", "Help me cope with depression", "Depressed and looking for help", "Support for feeling low", "How can I overcome depression?"],
+     "responses": ["Reach out to a mental health professional to discuss your feelings and explore therapeutic options that may be beneficial for you.", "Consider joining a support group for individuals experiencing depression. Shared experiences can foster understanding and connection.", "Engage in activities that promote a sense of accomplishment, even small ones, to boost your mood over time.", "Connect with friends or family members and let them know what you're going through. Having a support system is crucial.", "Prioritize self-care and seek help when needed. You're not alone, and there are resources available to support you."]
+    },
+    {"tag": "mindful_breathing",
+     "patterns": ["Teach me mindful breathing", "How can I practice mindful breathing?", "Suggest a breathing exercise", "Help me relax with breathing", "Mindfulness breathing techniques"],
+     "responses": ["Try the 4-7-8 breathing technique: Inhale quietly through your nose for a count of 4, hold your breath for a count of 7, and exhale completely through your mouth for a count of 8.", "Practice diaphragmatic breathing by inhaling deeply through your nose, allowing your abdomen to expand, and exhaling slowly through your mouth.", "Explore box breathing: Inhale for a count of 4, hold your breath for 4 counts, exhale for 4 counts, and pause before repeating.", "Focus on your breath, bringing your attention to the sensation of each inhale and exhale. If your mind wanders, gently guide it back to your breath.", "Consider using mindfulness apps that offer guided breathing exercises, making it easier to integrate them into your daily routine."]
+    },
+    {"tag": "mindful_walking",
+     "patterns": ["How can I practice mindful walking?", "Suggest a mindful walking exercise", "Help me be present while walking", "Mindfulness walking techniques"],
+     "responses": ["Walk slowly and pay attention to each step. Feel the sensation of your foot lifting, moving, and making contact with the ground.", "Focus on your surroundings. Notice the colors, shapes, and textures of the environment as you walk.", "Coordinate your breath with your steps. Inhale for a few steps, exhale for a few steps, and find a rhythm that feels natural.", "Walk without any distractions. Put away your phone and be fully present in the act of walking.", "Consider walking meditation, where you bring mindfulness to each step, fostering a sense of calm and awareness."]
+    },
+    {"tag": "creative_outlet",
+     "patterns": ["Suggest a creative outlet", "What creative activities can I try?", "Help me express myself creatively", "Creative outlets for mental health", "Give me artistic ideas"],
+     "responses": ["Experiment with painting or drawing. Expressing your emotions through visual art can be a powerful form of self-expression.", "Try writing poetry or journaling to articulate your thoughts and feelings. It can provide clarity and serve as a cathartic release.", "Engage in photography. Capture moments that resonate with you, and use the creative process to connect with your surroundings.", "Explore music creation, whether it's playing an instrument, composing, or experimenting with music software. Music can be a therapeutic outlet.", "Consider dance or movement as a way to express yourself physically and emotionally. It's a unique form of creative expression."]
+    },
+    {"tag": "connect_with_nature",
+     "patterns": ["How can I connect with nature?", "Suggest activities to connect with nature", "Help me find solace in nature", "Nature activities for well-being", "Give me outdoor ideas"],
+     "responses": ["Go for a nature walk or hike. Being surrounded by greenery and natural elements can have a positive impact on your mood.", "Practice forest bathing by immersing yourself in a forest environment. Pay attention to the sights, sounds, and scents around you.", "Consider gardening or spending time in a local park. Connecting with the earth and engaging in outdoor activities can be grounding.", "Take a moment to stargaze. Whether in your backyard or a serene location, observing the night sky can evoke a sense of wonder and perspective.", "Plan a day trip to a nearby nature reserve or scenic area. Enjoy the tranquility and beauty that nature has to offer."]
+    },
+    {"tag": "self_reflection",
+    "patterns": ["How can I engage in self-reflection?", "Suggest self-reflection activities", "Help me reflect on my emotions", "Self-awareness exercises", "Give me ideas for self-reflection"],
+    "responses": ["Journal about your day, exploring your thoughts, emotions, and any significant events. It's a powerful tool for self-reflection.", "Set aside quiet time for meditation, allowing your mind to wander and gently guiding your thoughts back to the present moment.", "Create a vision board representing your goals, aspirations, and the emotions you want to cultivate in your life.", "Ask yourself open-ended questions about your values, desires, and what brings you fulfillment. Reflecting on these aspects can guide your decisions.", "Consider practicing mindfulness through activities like mindful eating, bringing awareness to each bite and savoring the flavors."]
+   },
+   {"tag": "laughter_therapy",
+    "patterns": ["How can I incorporate laughter therapy?", "Suggest laughter therapy activities", "Help me find humor in tough times", "Laughter for mental health", "Give me ideas for laughter therapy"],
+    "responses": ["Watch a funny movie or stand-up comedy special. Laughter can be a natural mood booster.", "Engage in laughter yoga exercises, combining playful activities with intentional laughter to promote well-being.", "Connect with friends or family for a virtual game night filled with lighthearted board games or online games that bring joy and laughter.", "Explore humorous literature or cartoons that resonate with your sense of humor. Laughter can be found in unexpected places.", "Attend a comedy show or open mic night, either in person or virtually, to enjoy live performances that lift your spirits."]
+   },
+   {"tag": "mindful_eating",
+    "patterns": ["How can I practice mindful eating?", "Suggest mindful eating exercises", "Help me be present during meals", "Mindfulness eating tips", "Give me ideas for mindful eating"],
+    "responses": ["Eat slowly and savor each bite. Pay attention to the flavors, textures, and sensations of the food.", "Eliminate distractions during meals. Turn off screens and focus on the act of eating.", "Express gratitude for your food. Consider where it came from and the effort that went into its preparation.", "Chew your food thoroughly and be mindful of the process of digestion. This can enhance your connection with the act of eating.", "Listen to your body's hunger and fullness cues. Eat when you're hungry, and stop when you're satisfied."]
+   },
+   {"tag": "relationship_building",
+    "patterns": ["How can I build meaningful relationships?", "Suggest activities for relationship building", "Help me connect with others", "Relationship-building exercises", "Give me ideas for fostering connections"],
+    "responses": ["Join clubs or groups centered around your interests to meet like-minded individuals. Shared passions can be a foundation for meaningful connections.", "Volunteer for a cause you care about. Working together for a common goal can create strong bonds.", "Initiate conversations with new acquaintances by expressing genuine interest in their experiences and perspectives.", "Plan virtual or in-person gatherings with friends or family. Creating shared memories strengthens relationships.", "Practice active listening during conversations. Pay close attention to what others are saying, fostering deeper connections."]
+   },
+   {"tag": "goal_setting",
+    "patterns": ["How can I set and achieve goals?", "Suggest goal-setting activities", "Help me stay motivated", "Goal achievement tips", "Give me ideas for setting and reaching goals"],
+    "responses": ["Break down larger goals into smaller, manageable tasks. Celebrate each small achievement along the way.", "Create a vision board with images and words that represent your aspirations. Visualizing your goals can enhance motivation.", "Set SMART goals—specific, measurable, achievable, relevant, and time-bound. This framework helps clarify your ideas and focus your efforts.", "Share your goals with a trusted friend or family member. Having a support system can provide encouragement and accountability.", "Reflect on your values and priorities when setting goals. Aligning your aspirations with your core values enhances motivation and fulfillment."]
+   },
+   {"tag": "positive_journaling",
+    "patterns": ["How can I practice positive journaling?", "Suggest positive journaling exercises", "Help me focus on the good", "Positive thinking through journaling", "Give me ideas for positive journaling"],
+    "responses": ["Start a gratitude journal. Each day, jot down three things you're grateful for to cultivate a positive mindset.", "Write about positive experiences you've had recently. Reflecting on these moments can uplift your mood.", "Create a good things journal, recording positive events, compliments, or achievements. Reviewing this journal can boost your morale.", "Challenge negative thoughts by counteracting them with positive affirmations in your journal.", "Use your journal to set daily intentions for positivity and mindfulness, creating a positive mindset for the day ahead."]
+   },
+   {"tag": "emotion_analysis",
+     "patterns": ["I don't feel well", "Something's bothering me", "I'm not in a good mood", "Feeling a bit off", "Things aren't going great"],
+     "responses": ["I'm here to listen. Can you share more about what's on your mind or what you're experiencing?", "I'm sorry to hear that. If you're comfortable, tell me more about what you're going through. I'm here to help.", "It's okay to feel this way. If you'd like, share your thoughts or feelings, and we can work through them together.", "I'm here to support you. Describe how you're feeling, and we can explore ways to improve your mood.", "Acknowledging your emotions is an important step. Feel free to express what's on your mind, and we can navigate through it together."]
+    },
+    {"tag": "user_struggles",
+     "patterns": ["I'm struggling", "Dealing with some issues", "Having a hard time", "Feeling overwhelmed", "Going through a tough period"],
+     "responses": ["I'm sorry to hear that you're going through a tough time. If you're comfortable, share more about the challenges you're facing.", "Struggling is a part of life, and it's okay to ask for help. Let me know what's on your mind, and we can find ways to cope together.", "It's okay not to have it all figured out. If you're comfortable, tell me more about the difficulties you're encountering.", "I'm here to help you navigate through your struggles. Feel free to share as much or as little as you're comfortable with.", "Dealing with challenges is tough, but you don't have to face them alone. Let's talk about what you're going through and explore solutions together."]
+    },
+    {"tag": "user_wellbeing",
+     "patterns": ["I want to improve my well-being", "Looking for ways to feel better", "How can I boost my mood?", "Seeking emotional balance", "Working on self-improvement"],
+     "responses": ["It's great that you're proactively focusing on your well-being. What specific areas are you looking to improve, or what aspects of your mood would you like to enhance?", "Taking steps to improve your well-being is commendable. Let's discuss your goals and explore strategies to help you feel better.", "Your well-being matters, and I'm here to assist you. What are some specific aspects of your mood or life that you'd like to address?", "Improving your well-being is a positive step. Share more about what you're currently doing or what you're open to trying, and we can tailor suggestions to your needs.", "Working on self-improvement is a continuous journey. Let's discuss the areas you'd like to focus on and create a plan together."]
+    },
+    {"tag": "user_positive_moments",
+     "patterns": ["I had a great day", "Something positive happened", "Feeling good about something", "Had a positive experience", "Highlight of my day"],
+     "responses": ["I'm glad to hear that you had a positive experience! What made your day great, and how can we build on this positivity?", "Celebrating the good moments is important. Share more about what happened, and let's explore ways to extend these positive feelings.", "It's wonderful that you had a positive experience. Reflecting on these moments can be uplifting. What specifically made your day great?", "Positive moments contribute to our well-being. Tell me more about the highlight of your day, and let's explore ways to incorporate more positivity into your life.", "I'm here to celebrate your positive experiences with you. What happened that made you feel good, and how can we create more moments like that?"]
+    },
+    {"tag": "user_general_emotions",
+     "patterns": ["I'm feeling okay", "My mood is neutral", "Things are alright", "I'm neither happy nor sad", "In a balanced state"],
+     "responses": ["It's okay to feel neutral. If you ever want to talk or share more about your emotions, I'm here for you.", "Feeling okay is perfectly normal. If there's anything specific on your mind or if you'd like to chat, I'm here to listen.", "A balanced state is a valid and normal emotional experience. If you have any thoughts or feelings you'd like to discuss, feel free to share.", "Being in a neutral mood is completely fine. If there's anything you'd like to explore or discuss, let me know.", "Balanced emotions are a part of the spectrum. If there's anything you want to express or discuss, I'm here for you."]
+    },
+    {"tag": "user_coping_strategies",
+    "patterns": ["I need coping strategies", "How can I cope better?", "Dealing with stress", "Looking for ways to manage emotions", "Coping mechanisms"],
+    "responses": ["I'm here to help you explore coping strategies. Can you share more about the specific emotions or situations you're trying to manage?", "Coping is a personal journey, and I'm here to assist you. What aspects of your emotions or life are you looking to cope with?", "Dealing with stress and emotions is a common challenge. Let's discuss what you're currently experiencing, and we can explore coping strategies together.", "Coping mechanisms vary for everyone. If you're comfortable, tell me more about what you're going through, and we can brainstorm effective strategies.", "It's great that you're seeking coping strategies. Share more about the emotions or situations you're dealing with, and we can work on strategies tailored to your needs."]
+   },
+   {"tag": "user_self_discovery",
+    "patterns": ["I want to understand myself better", "Seeking self-discovery", "Understanding my emotions", "Who am I?", "Exploring my feelings"],
+    "responses": ["Self-discovery is a rewarding journey. What aspects of yourself or your emotions are you looking to explore? I'm here to assist you.", "Understanding yourself is a valuable endeavor. Share more about what you're curious about or what you'd like to explore, and we can navigate this journey together.", "Exploring your feelings and identity is a meaningful process. What specific aspects of yourself would you like to delve into?", "Self-discovery involves understanding various facets of your being. If there's a particular area you'd like to focus on, let's start the exploration together.", "Embarking on a journey of self-discovery is a positive step. What questions or aspects of yourself are you currently reflecting on?"]
+   },
+   {"tag": "user_personal_growth",
+    "patterns": ["I want to grow personally", "Seeking personal development", "How can I become a better person?", "Personal growth journey", "Improving myself"],
+    "responses": ["Embarking on a personal growth journey is commendable. What specific areas of personal development are you interested in, or what goals are you working towards?", "Personal growth is a continuous process. Share more about the aspects of yourself you'd like to enhance, and we can explore strategies for your journey.", "Improving oneself is a positive endeavor. What are some goals or qualities you're looking to develop, and how can I assist you in this process?", "Personal development is a unique and ongoing journey. If there's a particular area you'd like to focus on, let's discuss how we can foster growth together.", "I'm here to support your personal growth. What specific aspects of yourself or your life would you like to see progress in?"]
+   },
+   {"tag": "user_life_reflection",
+    "patterns": ["Reflecting on my life", "Contemplating my journey", "Life reflections", "Where am I headed?", "Assessing my experiences"],
+    "responses": ["Life reflection is a valuable practice. What aspects of your life journey are you currently contemplating or reflecting on?", "Reflecting on your life journey can bring insights. Share more about the areas or experiences you're considering, and we can explore them together.", "Contemplating your life is a meaningful process. What specific aspects or milestones are you currently reflecting upon?", "Life reflections can provide clarity. If there's a particular area of your life you'd like to discuss, I'm here to listen and offer support.", "Assessing your experiences is a natural part of growth. What reflections or realizations have emerged during your contemplation?"]
+   },
+   {"tag": "user_positive_outlook",
+    "patterns": ["I want a more positive outlook", "Seeking positivity", "How can I cultivate optimism?", "Positive mindset", "Shifting to a brighter perspective"],
+    "responses": ["Cultivating a positive outlook is a wonderful goal. What specific areas of your life or mindset would you like to infuse with more positivity?", "Seeking positivity is a positive step in itself. Share more about the aspects of your life you'd like to approach with a brighter perspective.", "Fostering a positive mindset is achievable. What situations or thoughts would you like to address, and how can we work towards a more optimistic outlook?", "Shifting to a more positive outlook involves small steps. Let's discuss the areas where you'd like to see positive changes.", "I'm here to assist you in cultivating a more positive mindset. What aspects of your life or thoughts are you currently navigating towards positivity?"]
+   },
+   {"tag": "user_venting",
+     "patterns": ["I need to vent", "Just need to talk", "Feeling overwhelmed", "Need to express myself", "Can I share my thoughts?"],
+     "responses": ["Of course, you can always share your thoughts here. I'm here to listen and provide support. What's on your mind?", "I'm here for you. Venting can be a helpful way to release emotions. Take your time and share as much as you'd like.", "It's okay to feel overwhelmed. I'm here to offer a listening ear. Share whatever you're comfortable with.", "Venting is a healthy way to express your feelings. Feel free to open up, and we can navigate through your thoughts together.", "I'm here to listen without judgment. Take your time and share your thoughts or concerns."]
+    },
+    {"tag": "user_life_challenges",
+     "patterns": ["Facing challenges", "Dealing with difficulties", "Struggling in life", "How to overcome obstacles", "Navigating tough times"],
+     "responses": ["Life's challenges are part of the journey. If you'd like, share more about the difficulties you're facing, and we can explore ways to overcome them together.", "Dealing with difficulties is tough, but you don't have to face it alone. Let's talk about the challenges you're navigating and find ways to support you.", "I understand life can be challenging. If you're comfortable, tell me more about the obstacles you're encountering, and we can work on strategies to overcome them.", "Overcoming obstacles is a shared human experience. I'm here to assist you. Share as much or as little as you'd like about what you're going through.", "It's okay to struggle, and it's okay to seek support. Let me know how I can help you navigate through these tough times."]
+    },
+    {"tag": "user_celebrating_success",
+     "patterns": ["I achieved something", "Celebrating a success", "Feeling accomplished", "Accomplished a goal", "Good news to share"],
+     "responses": ["Congratulations on your achievement! I'd love to hear more about what you've accomplished. What's the good news you'd like to share?", "Celebrating success is wonderful! Share the details of your accomplishment, and let's acknowledge and savor the moment together.", "Feeling accomplished is a great feeling! Tell me more about what you've achieved, and we can celebrate your success together.", "Achieving a goal is a significant milestone. I'm here to listen and share in your joy. What can you tell me about your recent success?", "I'm excited to hear about your accomplishment! Let's talk about the positive moments and how you reached your goal."]
+    },
+    {"tag": "user_uncertain_future",
+     "patterns": ["Feeling uncertain about the future", "Worried about what's next", "Uncertain about life", "How to deal with uncertainty", "Anxious about the future"],
+     "responses": ["Feeling uncertain about the future is normal. Let's talk about your concerns, and we can explore ways to cope with the uncertainty together.", "It's okay to feel worried about the future. Share more about what's on your mind, and we can work on managing those feelings of uncertainty.", "Uncertainty can be challenging. If you're comfortable, tell me more about the aspects of the future that are causing concern, and we can discuss strategies for coping.", "Dealing with uncertainty is a common experience. I'm here to provide support. What specific thoughts or situations are making you feel anxious about the future?", "I understand that uncertainty can be unsettling. Let's explore ways to navigate through this period of uncertainty together."]
+    },
+    {"tag": "user_self_expression",
+     "patterns": ["I want to express myself", "Exploring self-expression", "Need an outlet for emotions", "How to share my feelings", "Artistic self-expression"],
+     "responses": ["Expressing yourself is important. Whether through words or art, I'm here to support your self-expression. How would you like to share your thoughts or emotions?", "Exploring self-expression is a great way to connect with your feelings. If you have a specific form of expression in mind, let's discuss it further.", "Finding an outlet for emotions is valuable. Share more about how you'd like to express yourself, and we can explore different avenues together.", "Artistic self-expression can be powerful. If you're interested in exploring creative ways to express yourself, I'm here to help and brainstorm ideas.", "Your desire to express yourself is valid. Let's talk about the methods of self-expression that resonate with you."]
+    },
+    {"tag": "user_relationship_struggles",
+     "patterns": ["Having issues in relationships", "Struggling with friendships", "Relationship challenges", "Dealing with conflicts", "Navigating relationship problems"],
+     "responses": ["Relationships can be complex. If you're comfortable, share more about the challenges you're facing in your relationships, and we can explore ways to navigate through them.", "Struggling in relationships is a common experience. Let's talk about the specific issues you're dealing with, and we can work on strategies to improve them.", "Dealing with conflicts in relationships can be tough. If there are specific situations or concerns you'd like to discuss, I'm here to help.", "Navigating relationship problems is a shared journey. I'm here to provide support. What aspects of your relationships are causing difficulties?", "Relationship challenges are a part of life. Let's discuss the issues you're facing, and we can work together to find solutions."]
+    },
+    {"tag": "user_decision_making",
+     "patterns": ["Need help with decision-making", "Feeling indecisive", "Making tough choices", "How to decide", "Decision support"],
+     "responses": ["Decision-making can be challenging. If you're comfortable, share more about the choices you're facing, and we can discuss ways to make the process easier.", "Feeling indecisive is normal. Let's talk about the decisions you're trying to make, and we can work together to explore possible solutions.", "Making tough choices can be stressful. If there's a specific decision on your mind, tell me more about it, and we can discuss the options.", "Decision support is important. I'm here to help you navigate through the choices you're facing. What decisions are currently on your plate?", "I understand decision-making can be overwhelming. Share more about the choices you're considering, and we can explore strategies to make the process more manageable."]
+    },
+    {"tag": "user_time_management",
+     "patterns": ["Struggling with time management", "Feeling overwhelmed by tasks", "How to manage my time better", "Time management tips", "Balancing work and life"],
+     "responses": ["Struggling with time management is a common challenge. Let's discuss the tasks you're dealing with, and we can explore effective time management strategies together.", "Feeling overwhelmed by tasks is understandable. Share more about your schedule and responsibilities, and we can work on ways to manage your time more efficiently.", "Managing time effectively is crucial. If there are specific areas of your life where you're struggling, let's talk about them and find solutions.", "Balancing work and life can be challenging. I'm here to help you explore ways to manage your time and priorities. What specific aspects would you like to focus on?", "Time management is a skill that can be developed. Share more about your current challenges, and we can work on practical solutions."]
+    },
+    {"tag": "user_motivation_boost",
+     "patterns": ["Need a motivation boost", "Feeling demotivated", "How to stay motivated", "Motivation tips", "Struggling to find inspiration"],
+     "responses": ["Everyone experiences dips in motivation. If you'd like, share more about what's currently demotivating you, and we can explore ways to reignite your inspiration.", "Feeling demotivated is okay, and it happens to the best of us. Let's discuss the areas of your life where you're seeking motivation, and we can work on strategies to boost it.", "Staying motivated is an ongoing process. If there are specific goals or tasks you're struggling to stay motivated for, let's talk about them and find ways to rekindle your enthusiasm.", "Finding inspiration can be challenging. I'm here to help you explore sources of motivation and discuss practical tips for staying inspired. What would you like to focus on?", "Motivation is a journey, not a constant state. Share more about what you're working on, and we can explore ways to keep your motivation levels up."]
+    },
+    {"tag": "user_gratitude_practice",
+     "patterns": ["Interested in practicing gratitude", "How to cultivate gratitude", "Gratitude exercises", "Gratefulness tips", "Starting a gratitude journal"],
+     "responses": ["Practicing gratitude is a wonderful habit. If you're interested, I can guide you through gratitude exercises or help you start a gratitude journal. What aspects of your life would you like to express gratitude for?", "Cultivating gratitude is beneficial for well-being. Let's explore gratitude exercises or discuss starting a gratitude journal. What specific moments or aspects of your life are you grateful for?", "Gratitude practice can be transformative. If there are particular areas of your life where you'd like to foster gratitude, let's talk about them and incorporate gratitude into your routine.", "Starting a gratitude journal is a positive step. I'm here to assist you in initiating this practice. What moments or aspects of your life would you like to acknowledge with gratitude?", "Gratitude can bring positivity into your life. Share more about the areas you'd like to focus on, and we can tailor gratitude exercises to your preferences."]
+    },
+    {"tag": "user_sleep_quality",
+     "patterns": ["Struggling with sleep", "Poor sleep quality", "How to improve sleep", "Insomnia tips", "Sleep hygiene suggestions"],
+     "responses": ["Struggling with sleep is challenging. If you're comfortable, share more about your sleep patterns, and we can explore ways to improve your sleep quality.", "Poor sleep quality can affect well-being. Let's discuss your sleep routine and habits, and we can work on establishing healthier sleep patterns together.", "Improving sleep is important for overall health. If there are specific factors contributing to your sleep challenges, let's talk about them and explore strategies for better sleep.", "Insomnia can be distressing. I'm here to help you explore sleep hygiene suggestions and discuss lifestyle factors that may be impacting your sleep. What aspects would you like to focus on?", "Sleep is crucial for overall well-being. Share more about your sleep concerns, and we can work on creating a plan to enhance your sleep quality."]
+    },
+    {"tag": "user_joyful_moments",
+     "patterns": ["Seeking more joyful moments", "How to find joy", "Bringing joy into my life", "Joyful activities", "Cultivating happiness"],
+     "responses": ["Seeking more joyful moments is a positive goal. What activities or aspects of your life bring you joy, and how can we incorporate more of those moments?", "Finding joy is important for well-being. Let's discuss the activities or experiences that bring you happiness, and we can explore ways to cultivate more joyful moments.", "Bringing joy into your life is a wonderful aspiration. If there are specific areas where you'd like to experience more joy, let's talk about them and create a plan.", "Joyful activities contribute to a fulfilling life. I'm here to help you identify and prioritize the things that bring you joy. What aspects would you like to focus on?", "Cultivating happiness is a meaningful pursuit. Share more about the experiences or activities that resonate with you, and we can work on integrating more joy into your daily life."]
+    },
+    {"tag": "user_relationship_growth",
+    "patterns": ["Looking to improve relationships", "Building stronger connections", "Relationship growth", "How to nurture friendships", "Enhancing social connections"],
+    "responses": ["Improving relationships is a positive goal. If you'd like, share more about the connections you want to strengthen, and we can explore ways to nurture those relationships together.", "Building stronger connections is valuable. Let's discuss the relationships you're looking to enhance, and we can work on strategies for fostering growth.", "Relationship growth is a continuous process. If there are specific friendships or connections you're focusing on, tell me more, and we can explore ways to nurture and strengthen them.", "Nurturing friendships is important for well-being. I'm here to assist you. What aspects of your social connections would you like to improve or grow?", "Enhancing social connections contributes to a fulfilling life. Share more about the relationships you're working on, and we can discuss ways to promote growth."]
+   },
+   {"tag": "user_creative_expression",
+    "patterns": ["Exploring creative expression", "How to tap into creativity", "Creative outlets", "Expressing emotions through art", "Creative inspiration"],
+    "responses": ["Exploring creative expression is a wonderful journey. If you're interested, I can guide you through various creative outlets or help you discover your unique ways of expressing emotions.", "Tapping into creativity can be a fulfilling experience. Let's discuss your interests or any specific artistic expressions you're curious about, and we can explore ways to foster your creativity.", "Creative outlets are diverse and personal. If there's a specific form of artistic expression you're drawn to, share more, and we can discuss how to incorporate it into your routine.", "Expressing emotions through art can be therapeutic. I'm here to support your creative journey. What mediums or forms of artistic expression are you interested in exploring?", "Creative inspiration can be found in many places. Let's talk about the aspects of your life or interests that inspire you, and we can brainstorm creative ways to express yourself."]
+   },
+   {"tag": "user_body_mind_connection",
+    "patterns": ["Exploring mind-body connection", "How to connect with my body", "Mindfulness for well-being", "Physical and mental health", "Holistic well-being practices"],
+    "responses": ["Exploring the mind-body connection is a holistic approach to well-being. If you're interested, I can guide you through mindfulness practices or discuss ways to enhance the connection between your body and mind.", "Connecting with your body is essential for overall well-being. Let's explore mindfulness techniques or physical activities that resonate with you, and we can create a plan for holistic well-being.", "Mindfulness is a powerful tool for health. If there are specific aspects of physical and mental well-being you're focusing on, share more, and we can discuss practices tailored to your needs.", "Physical and mental health are interconnected. I'm here to assist you in exploring practices that promote holistic well-being. What areas would you like to prioritize?", "Holistic well-being practices contribute to a balanced life. Share more about your interests or goals, and we can work on incorporating practices that benefit both your body and mind."]
+   },
+   {"tag": "user_educational_goals",
+    "patterns": ["Setting educational goals", "Academic aspirations", "How to stay focused on studies", "Overcoming learning challenges", "Balancing education and life"],
+    "responses": ["Setting educational goals is a commendable pursuit. If you'd like, share more about your academic aspirations, and we can discuss ways to stay focused on your studies.", "Academic aspirations are important for personal growth. Let's talk about your educational goals and any challenges you're facing, and we can work on strategies for success.", "Staying focused on studies can be challenging. If there are specific learning challenges you're dealing with, share more, and we can explore ways to overcome them.", "Overcoming learning challenges is a shared journey. I'm here to support your educational goals. What subjects or areas would you like assistance with?", "Balancing education and life is crucial. Share more about your priorities and commitments, and we can create a plan that ensures a harmonious balance."]
+   },
+   {"tag": "user_resilience_building",
+    "patterns": ["Building resilience", "Coping with setbacks", "Overcoming adversity", "Resilience-building tips", "Staying strong in tough times"],
+    "responses": ["Building resilience is a valuable skill. If you'd like, share more about the setbacks or challenges you're navigating, and we can explore ways to enhance your resilience.", "Coping with setbacks is a part of life. Let's talk about the specific adversities you're facing, and we can work on resilience-building strategies together.", "Overcoming adversity requires strength. If there are specific situations or setbacks you'd like to discuss, I'm here to offer support and resilience-building tips.", "Resilience-building is an ongoing process. I'm here to assist you. What areas of your life would you like to focus on in terms of building resilience?", "Staying strong in tough times is commendable. Share more about the challenges you're experiencing, and we can explore strategies to enhance your resilience."]
+   },
+   {"tag": "user_mindful_communication",
+    "patterns": ["Improving communication skills", "Mindful communication", "Effective expression of thoughts", "Active listening practices", "Navigating difficult conversations"],
+    "responses": ["Improving communication skills is a valuable goal. If you'd like, share more about the aspects of communication you're focusing on, and we can explore ways to enhance your skills.", "Mindful communication is key for healthy relationships. Let's discuss specific areas of communication you'd like to improve, and we can work on effective strategies together.", "Expressing thoughts effectively is an important skill. If there are specific challenges in communication you're facing, share more, and we can explore ways to navigate them.", "Active listening is a crucial aspect of communication. I'm here to assist you in developing effective communication practices. What areas would you like to focus on?", "Navigating difficult conversations requires skillful communication. Share more about the situations you find challenging, and we can discuss strategies for effective and mindful communication."]
+   },
+   {"tag": "small_talk_greeting",
+     "patterns": ["How are you?", "What's up?", "How's your day?", "Hey!", "Hi!", "What's going on?", "Howdy", "Hello there", "Greetings"],
+     "responses": ["Hello! I'm here and ready to chat. How can I assist you today?", "Hi there! I'm doing well. How about you? What brings you here?", "Hey! I'm here to help. What's on your mind today?", "Hi! I'm ready for a chat. What can I do for you?", "Hello there! How's your day going? Anything exciting happening?", "Howdy! I'm here and ready to assist. What can I do for you today?"]
+    },
+    {"tag": "gratitude_response",
+     "patterns": ["Thank you", "Thanks a lot", "Appreciate it", "Thanks!", "Grateful"],
+     "responses": ["You're welcome! If you have any more questions or need assistance, feel free to ask.", "No problem! I'm here to help. Is there anything else you'd like to talk about?", "You're welcome! If there's anything else on your mind, feel free to let me know.", "Glad I could assist! If there's anything else you need, just give me a shout.", "You're welcome! If you ever need support or have questions, I'm here for you."]
+    },
+    {"tag": "farewell",
+     "patterns": ["Goodbye", "See you later", "Bye for now", "Take care", "Farewell", "Until next time"],
+     "responses": ["Goodbye! If you ever want to chat again, feel free to reach out. Take care!", "See you later! If you need assistance in the future, don't hesitate to come back.", "Bye for now! If there's anything else I can help you with, just let me know.", "Take care! If you have more questions or just want to chat, I'll be here.", "Farewell! Feel free to return whenever you'd like. Have a great day!"]
+    },
+    {"tag": "generic_acknowledgment",
+     "patterns": ["Okay", "Got it", "Understood", "Sure", "Thanks for letting me know", "Alright"],
+     "responses": ["Great! If you have any more questions or if there's anything else you'd like to discuss, feel free to ask.", "Got it! If there's anything specific you'd like to explore, just let me know.", "Understood! If there's more information you'd like or any other topic you want to cover, feel free to mention it.", "Sure thing! If there's anything else on your mind or if you need assistance, I'm here.", "Thanks for letting me know! If there's anything specific you'd like to talk about, I'm all ears."]
+    },
+    {"tag": "user_thanks_inquiry",
+     "patterns": ["How about you?", "And you?", "What's up with you?", "How's your day going?", "Tell me about yourself", "What are you up to?"],
+     "responses": ["Thanks for asking! I'm here to assist you. Is there anything specific you'd like help with today?", "I appreciate you asking! I'm here and ready to chat. What can I do for you?", "Thanks for the inquiry! I'm doing well and ready to help. What brings you to our chat today?", "I'm here and ready to assist you. How can I make your day better?", "Thanks for asking! I'm here to provide support. What's on your mind?"]
+    },
+    {"tag": "general_response",
+     "patterns": ["Tell me more", "Can you elaborate?", "Go on", "Continue", "I'm listening", "What else?", "Share more details", "Explain further", "Expand on that"],
+     "responses": ["Sure, I'd be happy to provide more information. What specific details are you interested in?", "I'm here to help. Feel free to share more details, and I'll do my best to assist you.", "I'm all ears! Feel free to elaborate on your thoughts or ask any specific questions you have.", "Continue, I'm here to listen. Is there a particular aspect you'd like more information about?", "I'm listening attentively. Please feel free to share more, and we can delve deeper into the topic.", "Go on! If there's more you'd like to discuss or ask about, I'm here for you.", "Certainly! If there's anything specific you'd like me to elaborate on, just let me know.", "Tell me more! I'm here to provide information and support based on your needs.", "Feel free to continue sharing. Whether it's thoughts, questions, or concerns, I'm here to assist."]
+    },
+    {"tag": "user_disclaimer",
+     "patterns": ["I'm not sure", "I don't know", "I'm uncertain", "I'm unclear", "I have no idea", "Not sure what to say", "I'm a bit lost", "I'm confused", "I'm not certain"],
+     "responses": ["That's okay! If there's anything specific you're uncertain about, feel free to ask, and I'll do my best to assist you.", "No worries! If there's anything you're unclear about or need more information on, just let me know.", "It's perfectly fine not to have all the answers. If there's something specific on your mind, feel free to share, and I'll help as best I can.", "No problem at all! If you have questions or if there's something you'd like clarification on, feel free to ask.", "Not a problem! If there's anything you're confused about, I'm here to provide guidance and information.", "That's okay! If you need assistance or have questions later on, don't hesitate to reach out. I'm here to help."]
+    },
+    {"tag": "user_appreciation",
+     "patterns": ["Great job", "Well done", "Thank you for your help", "I appreciate it", "You're awesome", "Good work", "Thanks a lot", "Thank you", "You're the best"],
+     "responses": ["Thank you! I'm glad I could assist you. If there's anything else you need help with, feel free to let me know.", "I appreciate your kind words! If there's anything else I can do for you, don't hesitate to ask.", "Thank you for your positive feedback! It's my pleasure to assist you. Is there anything specific you'd like to discuss further?", "You're welcome! I'm here to help anytime you need assistance. Just reach out.", "Thanks a lot! If there are more questions or topics you'd like to explore, feel free to mention them.", "I'm glad I could help! If there's anything else on your mind, feel free to share, and we can continue the conversation.", "Thank you! Your appreciation means a lot. Let me know if there's anything else I can do for you.", "I'm here to assist, and I'm happy to hear you found the support helpful. If there's anything specific you'd like to discuss, feel free to let me know."]
+    },
+    {"tag": "user_apology",
+     "patterns": ["I'm sorry", "Apologies", "Sorry about that", "My apologies", "I didn't mean to", "Forgive me", "I apologize", "I'm sorry if I", "My apologies if"],
+     "responses": ["No need to apologize! If there's anything specific on your mind or if you have questions, feel free to share.", "No worries! If there's something you'd like to discuss or if you have questions, I'm here to help.", "It's okay! If there's a particular topic or concern you'd like assistance with, let me know.", "No problem at all! If there's anything specific you'd like to address or discuss, feel free to mention it.", "No need to apologize! If there's something on your mind or if you have questions, I'm here to assist.", "No problem! If there's a specific area you'd like to focus on or if you have questions, feel free to let me know.", "No apologies necessary! If there's anything you'd like to talk about or if you have questions, I'm here to help."]
+    },
+    {"tag": "user_encouragement",
+     "patterns": ["You can do it", "Keep going", "Don't give up", "Stay positive", "You've got this", "Believe in yourself", "Keep trying", "Stay strong", "Never give up"],
+     "responses": ["Thank you for the encouragement! I'm here to support you. If there's anything specific you'd like assistance with, let me know.", "I appreciate the positive vibes! Remember, I'm here to assist you. If there's anything you'd like to talk about, feel free to share.", "Your determination is inspiring! If there's a specific goal or challenge you're working on, let me know, and we can discuss strategies.", "Thank you for the encouragement! If there's anything on your mind or if you have questions, I'm here to help.", "I appreciate the motivational words! If there's a particular area you'd like to focus on or if you have questions, feel free to mention it.", "Your perseverance is commendable! If there's something specific you'd like assistance with, let me know, and we can work on it together."]
+    },
+    {"tag": "user_sleeplessness",
+    "patterns": ["Can't sleep", "Insomnia", "Trouble sleeping", "Sleepless nights", "Difficulty falling asleep", "Restless nights", "I can't sleep well", "Lack of sleep", "Sleep troubles"],
+    "responses": ["I'm sorry to hear you're experiencing difficulty sleeping. Sleep is essential for overall well-being. Let's explore what might be contributing to your sleep troubles. Are there specific thoughts or concerns on your mind that you'd like to discuss?", "I understand that sleeplessness can be challenging. It's important to address this. Can you share more about any specific factors or emotions that may be impacting your ability to sleep well?", "I'm here to help with your sleep concerns. Sleep and emotional well-being are closely connected. Is there anything in particular causing restlessness or difficulty falling asleep that you'd like to talk about?", "I'm sorry to hear about your sleep troubles. It's common for emotions to affect our sleep. If you're comfortable, share more about your current emotional state, and we can explore ways to improve both your sleep and well-being.", "Sleep is crucial for health, and I'm here to help. If you're comfortable, let's discuss any emotions or thoughts that might be contributing to your difficulty sleeping."]
+   },
+   {"tag": "user_emotional_sleep",
+    "patterns": ["Emotions affecting sleep", "How do emotions impact sleep?", "Can stress affect sleep?", "Anxiety and sleep", "Depression and sleep", "Sleep and emotional well-being", "Impact of emotions on sleep quality", "Stress keeping me awake"],
+    "responses": ["Emotions can indeed have a significant impact on sleep. Stress, anxiety, and depression are known to affect sleep quality. Let's talk about the specific emotions you're dealing with, and we can explore strategies to manage them for better sleep.", "The connection between emotions and sleep is well-documented. Stress and anxiety can interfere with sleep patterns. If you're comfortable, share more about the emotions you're experiencing, and we can discuss ways to improve your sleep quality.", "It's common for emotions to influence sleep. Stress, anxiety, and depression can impact your ability to rest. If you're comfortable, let's delve into the specific emotions you're dealing with and work on strategies to promote better sleep.", "The relationship between emotions and sleep is complex. Stress and emotional well-being play a role in sleep quality. If you're open to it, share more about your emotions, and we can explore ways to enhance your sleep.", "I understand how emotions can affect sleep. Stress, anxiety, and depression can impact your ability to rest well. Let's discuss the specific emotions you're dealing with, and we can work on improving your sleep quality together."]
+   },
+   {"tag": "user_sleep_advice",
+    "patterns": ["How to improve sleep", "Tips for better sleep", "Sleep hygiene suggestions", "Insomnia advice", "What can I do for better sleep?", "Improving sleep quality", "Strategies for better sleep", "How to relax before bed"],
+    "responses": ["Improving sleep is a common goal, and there are several strategies you can try. Establishing a consistent sleep routine, practicing relaxation techniques, and creating a comfortable sleep environment are some tips. Would you like more specific advice tailored to your situation?", "Enhancing sleep quality involves adopting healthy sleep habits. Consistent sleep schedules, minimizing screen time before bed, and creating a calming bedtime routine can help. Are there specific aspects you'd like more advice on?", "There are various ways to improve sleep quality. Maintaining a regular sleep schedule, creating a comfortable sleep environment, and practicing relaxation techniques can be beneficial. Would you like personalized tips based on your preferences?", "I can offer suggestions to improve your sleep. Establishing a calming bedtime routine, avoiding stimulants before bed, and ensuring a comfortable sleep environment are essential. Which areas are you interested in exploring for better sleep?", "Improving sleep quality is a gradual process. Establishing a sleep routine, managing stress, and creating a relaxing bedtime environment can contribute. If you have specific preferences or concerns, let me know, and we can tailor advice to your needs."]
+   },
+   {"tag": "user_sleep_gratitude",
+    "patterns": ["Can gratitude help with sleep?", "Gratitude before bedtime", "How does gratitude affect sleep?", "Practicing gratitude for better sleep", "Gratefulness and sleep", "Gratitude journal for insomnia", "Impact of gratitude on sleep quality", "Can being thankful improve sleep?"],
+    "responses": ["Practicing gratitude can indeed positively impact sleep. Reflecting on things you're thankful for before bedtime can promote a sense of well-being and relaxation. If you're interested, we can explore incorporating gratitude into your bedtime routine. How does that sound to you?", "Gratitude has been shown to have positive effects on well-being, and this can extend to sleep. Consider keeping a gratitude journal or reflecting on positive aspects of your day before bedtime. Would you like guidance on incorporating gratitude into your sleep routine?", "Gratitude can contribute to improved sleep quality. Taking a moment to express gratitude before bedtime may help create a more positive mindset. If you'd like, we can discuss ways to integrate gratitude into your nighttime routine.", "Practicing gratitude has been associated with better sleep outcomes. If you're open to it, we can explore how you can incorporate gratitude exercises into your evening routine to support your sleep. How does that sound?", "Gratitude can be a powerful tool for well-being, and it might positively influence your sleep. If you're interested, we can discuss practical ways to integrate gratitude practices into your bedtime routine."]
+   },
+   {"tag": "user_sleep_journey",
+    "patterns": ["My sleep journey", "Struggling with sleep for a while", "Long-term sleep issues", "Chronic insomnia", "History of sleep troubles", "Previous sleep attempts", "Sleep challenges over time", "Dealing with insomnia for years"],
+    "responses": ["I appreciate you sharing your sleep journey. It sounds like you've been dealing with sleep challenges for a while. Let's explore your experiences and any specific factors that might contribute to your sleep difficulties. How can I best support you?", "It's understandable that chronic sleep issues can impact various aspects of life. I'm here to listen and assist you. If you're comfortable, share more about your sleep journey, and we can discuss potential strategies for improvement.", "Dealing with long-term sleep challenges can be challenging. I'm here to support you on your sleep journey. Let's talk about your experiences and explore ways to address your chronic insomnia. How does that sound?", "Thank you for opening up about your sleep history. Chronic insomnia can be complex, and your experiences are important. If you'd like, we can discuss specific strategies or approaches to support your ongoing sleep journey.", "I hear that you've been dealing with sleep challenges for a while. Chronic insomnia can have a significant impact. Let's talk about your sleep journey, and together we can explore ways to improve your sleep quality and overall well-being."]
+   },
+   {"tag": "user_relaxation_techniques",
+     "patterns": ["Relaxation techniques for sleep", "How to relax before bedtime", "Calming exercises for sleep", "Relaxing before sleep", "Bedtime relaxation methods", "Calm down for sleep", "What can I do to relax at night?"],
+     "responses": ["Relaxation techniques can be beneficial for promoting better sleep. Deep breathing exercises, progressive muscle relaxation, and guided imagery are effective methods. Would you like guidance on incorporating specific relaxation techniques into your bedtime routine?", "Practicing relaxation techniques before bedtime can help signal your body that it's time to wind down. Techniques such as deep breathing or mindfulness meditation can be effective. Are you interested in trying any specific relaxation exercises?", "Calming exercises before sleep can contribute to a more restful night. Techniques like gentle stretching, deep breathing, or a warm bath can be helpful. Would you like guidance on incorporating specific relaxation methods into your nightly routine?", "Relaxing before sleep is important. Consider activities like reading a calming book, practicing deep breathing, or listening to soothing music. Is there a specific relaxation method you'd like to explore or any preferences you have?", "Creating a relaxing bedtime routine can improve your sleep. Techniques like progressive muscle relaxation or guided meditation can be beneficial. If you're open to it, we can discuss how to integrate these practices into your nightly routine."]
+    },
+    {"tag": "user_bedtime_routine",
+     "patterns": ["Creating a bedtime routine", "Effective bedtime rituals", "Establishing a sleep routine", "Nighttime rituals for better sleep", "What should I do before bed?", "Healthy bedtime habits", "Setting up a nightly routine"],
+     "responses": ["Establishing a consistent bedtime routine signals your body that it's time to wind down. Activities like reading, dimming lights, or practicing relaxation techniques can be included. Would you like help creating a personalized bedtime routine?", "A bedtime routine can contribute to better sleep. Consider activities like gentle stretching, turning off electronic devices, or practicing mindfulness. Is there a specific aspect of your nightly routine you'd like to focus on or create?", "Setting up a bedtime routine can improve your sleep. Incorporate calming activities such as a warm bath, reading a book, or listening to soothing music. If you'd like, we can discuss how to tailor a routine that suits your preferences.", "A bedtime routine is essential for good sleep hygiene. Activities like avoiding screens, practicing relaxation, or engaging in a calming hobby can be beneficial. Is there a particular aspect of your nightly routine you'd like to enhance?", "Creating a healthy bedtime routine is key for better sleep. We can discuss activities like gentle stretches, breathing exercises, or mindfulness practices to include in your personalized bedtime routine."]
+    },
+    {"tag": "user_nightmares",
+     "patterns": ["Nightmares keeping me awake", "Disturbing dreams at night", "Dealing with nightmares", "Trouble sleeping due to bad dreams", "What to do about nightmares?", "Nightmares affecting my sleep", "How to stop nightmares"],
+     "responses": ["I'm sorry to hear that you're experiencing nightmares. They can indeed affect sleep quality. It's essential to address this. If you're comfortable, we can explore any specific themes or triggers in your nightmares and discuss strategies to manage them for better sleep.", "Nightmares can be distressing and impact sleep. It's important to address the underlying causes. If you're open to it, we can discuss your experiences and explore ways to cope with or reduce the frequency of nightmares.", "Dealing with nightmares can be challenging. If you're comfortable, share more about the content of your dreams, and we can explore strategies to manage and reduce the impact of nightmares on your sleep.", "I understand that nightmares can be distressing. If you're comfortable, let's discuss the nature of your nightmares and work on strategies to create a more peaceful sleep environment. How does that sound to you?", "Nightmares can certainly disrupt sleep. If you're comfortable, share more about your experiences, and we can explore strategies to address and alleviate the impact of nightmares on your sleep quality."]
+    },
+    {"tag": "user_night_time_worry",
+     "patterns": ["Worrying at night", "Anxious thoughts before bed", "Mind racing at night", "How to stop worrying at night", "Nighttime anxiety", "Worries keeping me awake", "Mind won't shut off at night"],
+     "responses": ["I understand that nighttime worrying can be challenging. It's common for anxiety to impact sleep. If you're comfortable, we can explore the specific worries on your mind and work on strategies to ease anxiety before bedtime.", "Worrying at night is a common challenge. If you're open to it, we can discuss the specific thoughts or concerns that are keeping you awake and explore strategies to manage nighttime anxiety.", "Anxious thoughts before bed can interfere with sleep. If you're comfortable, share more about the nature of your worries, and we can work on strategies to calm your mind and promote better sleep.", "I'm here to help with nighttime worries. If you're comfortable, let's talk about the specific thoughts or concerns that are keeping you awake, and we can explore ways to manage them for a more peaceful night's sleep.", "I hear you're dealing with worries at night. If you're open to it, we can discuss the specific concerns on your mind and work on strategies to address and alleviate nighttime anxiety."]
+    },
+    {"tag": "user_sleep_medication",
+     "patterns": ["Using sleep medication", "Sleep aids and remedies", "Should I take sleeping pills?", "Dependency on sleep medication", "Natural sleep remedies", "Alternatives to sleep medication", "How to sleep without medication"],
+     "responses": ["Using sleep medication is a personal choice, and it's essential to consider both benefits and potential risks. If you're open to it, we can discuss alternatives such as improving sleep hygiene, relaxation techniques, or other non-pharmacological approaches to promote better sleep.", "Sleep medication is one option, but it's important to explore alternatives. If you're comfortable, we can discuss non-pharmacological approaches like establishing a bedtime routine, practicing relaxation, or improving sleep hygiene to enhance your sleep naturally.", "Using sleep medication is a decision that depends on personal preferences and health considerations. If you're open to it, we can explore natural alternatives like improving sleep hygiene, practicing relaxation techniques, or creating a calming bedtime routine.", "Dependence on sleep medication can have implications, and exploring alternatives is valuable. If you're comfortable, we can discuss non-pharmacological approaches to improve sleep, such as creating a consistent bedtime routine or practicing relaxation techniques.", "Considering alternatives to sleep medication is a thoughtful approach. If you're open to it, we can explore non-pharmacological methods like improving sleep hygiene, incorporating relaxation techniques, or creating a calming bedtime routine to support your sleep."]
+    }
+    ]
+}

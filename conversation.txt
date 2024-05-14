@@ -1,0 +1,16 @@
+user: Hey there, I am feeling low today, any idea how I can cheer myself up?
+
+bot: Predicted emotion: sadness
+
+Predicted emotion: sadness
+I'm sorry to hear that you're feeling low. One way to cheer yourself up is to engage in activities that bring you joy, such as listening to music, going for a walk in nature, or spending time with loved ones. Remember, this feeling is temporary and you are not alone. Would you like to talk more about what's been bothering you?
+
+user: I do not wish to talk about this
+
+bot: Predicted emotion: sadness
+That's completely okay. Sometimes it's hard to open up about our feelings. Just know that it's important to take care of yourself during this time. You can try practicing self-care activities like taking a warm bath, reading a book, or watching your favorite movie. Remember, it's okay to not be okay. If you change your mind and want to talk, I'm here for you.
+
+user: 
+
+bot: I see that you didn't type anything. If you'd like to share more about how you're feeling or if there's anything specific on your mind, feel free to let me know. I'm here to help.
+
